@@ -9,6 +9,47 @@ module.exports = {
 
   attributes: {
 
+  		name: {
+  			type: 'string'
+  		},
+
+  		description: {
+  			type: 'text'
+  		},
+
+  		start: {
+  			type: 'date'
+  		},
+
+  		end: {
+  			type: 'date'
+  		},
+
+  		image: {
+  			type: 'string'
+  		},
+
+  		amount: {
+  			type: 'float'
+  		},
+
+  		company: {
+  			model: 'company'
+  		},
+
+  		users: {
+  			collection: 'user',
+  			via: 'challenges'
+  		},
+
+  		donation: {
+  			model: 'donation'
+  		},
+
+  		mission: {
+  			model: 'mission'
+  		}
+
   }
 };
 

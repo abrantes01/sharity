@@ -9,6 +9,25 @@ module.exports = {
 
   attributes: {
 
+  		user: {
+  			model: 'user'
+  		},
+
+  		mission: {
+  			model: 'mission'
+  		},
+
+  		company: {
+  			model: 'company'
+  		},
+
+  		challenge: {
+  			model: 'challenge'
+  		},
+
+  		amount: {
+  			type: 'float'
+  		}
   }
 };
 

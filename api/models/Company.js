@@ -9,6 +9,35 @@ module.exports = {
 
   attributes: {
 
+  		name: {
+  			type: 'string'
+  		},
+
+  		description: {
+  			type: 'text'
+  		},
+
+  		website: {
+  			type: 'string'
+  		},
+
+  		facebook: {
+  			type: 'string'
+  		},
+
+  		turnOver: {
+  			type: 'float'
+  		},
+
+  		challenges: {
+  			collection: 'challenge',
+  			via: 'company'
+  		},
+
+  		donations: {
+  			collection: 'donation',
+  			via: 'company'
+  		}
   }
 };
 

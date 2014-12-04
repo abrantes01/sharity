@@ -1,5 +1,5 @@
 /**
-* User.js
+* Mission.js
 *
 * @description :: TODO: You might write a short summary of how this model works and what it represents here.
 * @docs        :: http://sailsjs.org/#!documentation/models
@@ -9,30 +9,22 @@ module.exports = {
 
   attributes: {
 
-  		firstName: {
+  		name: {
   			type: 'string'
   		},
 
-  		lastName: {
-  			type: 'string'
+  		charity: {
+  			model: 'charity'
   		},
 
-  		email: {
-  			type: 'email',
-  			unique: true,
-  			required: true
-  		},
-
-  		donations: {
-  			collection: 'donation',
-  			via: 'user'
+  		description: {
+  			type: 'text'
   		},
 
   		challenges: {
   			collection: 'challenge',
-  			via: 'users'
+  			via: 'mission'
   		}
-
   }
 };
 

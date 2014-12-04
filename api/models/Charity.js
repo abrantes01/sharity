@@ -9,6 +9,20 @@ module.exports = {
 
   attributes: {
 
+  		name: {
+  			type: 'string'
+  		},
+
+  		description: {
+  			type: 'text'
+  		},
+
+  		missions: {
+  			collection: 'mission',
+  			via: 'charity'
+  		}
+
+
   }
 };
 
