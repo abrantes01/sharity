@@ -1,0 +1,103 @@
+<!doctype html>
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <title>Scoledge</title>
+
+    <link rel="shortcut icon" href="favicon.png">
+    <meta name="keywords" content="Scoledge, digital workspace, Cloud, education network"/>
+    <meta name="description" content="Scoledge is a social workspace which offers cutting-edge features to allow students and teachers work more efficiently. Everything you need is in the Cloud.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet'
+          type='text/css'>
+    <!-- needs images, font... therefore can not be part of ui.css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles/style.css"/>
+
+    <style>
+        .none {
+            display: none;
+        }
+        #list-connected-users > .slimScrollDiv{
+            min-width:200px;
+            z-index:9999;
+            background-color:white;
+        }
+    </style>
+</head>
+<body
+        data-ng-controller="appCtrl"
+        data-ng-app="app"
+        id="app"
+        data-custom-background=""
+        data-off-canvas-nav="">
+
+<!--[if lt IE 9]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div>
+
+        <!-- HEADER -->
+        <section data-ng-include=" 'views/header.html' "
+                 id="header" class="top-header"></section>
+
+
+    <div class="view-container">
+        <section data-ng-cloak=""
+                 data-ui-view=""
+                 id="content"
+                 class="animate-fade-up"></section>
+    </div>
+</div>
+
+
+<script src="scripts/config.js"></script>
+
+<!-- build:js scripts/vendor.js -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="bower_components/jquery-ui/ui/jquery-ui.js"></script>
+<script src="bower_components/sails.io.js/dist/sails.io.js"></script>
+<!-- endbuild -->
+<script>
+    io.sails.useCORSRouteToGetCookie = false;
+    io.sails.url = appConfig.appUrl;
+</script>
+<script src="bower_components/angularSails/dist/ngsails.io.js"></script>
+
+
+<script src="scripts/app.js"></script>
+<script src="scripts/Modules/homeCtrl.js"></script>
+<script src="scripts/Modules/shared/main.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+
+<script>
+    function isLocalStorageNameSupported() {
+        var testKey = 'test', storage = window.sessionStorage;
+        try {
+            storage.setItem(testKey, '1');
+            storage.removeItem(testKey);
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
+
+    if(!isLocalStorageNameSupported()) {
+        alert("Attention, le LocalStorage HTML5 n'est pas supporté sur Safari en navigation privée, veuillez repasser en navigation normale pour utiliser l'application.");
+    }
+</script>
+<!-- endbuild -->
+</body>
+</html>
