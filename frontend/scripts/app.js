@@ -10,7 +10,8 @@ angular.module('app',
             'app.charity',
             'app.challenge',
             'app.controllers',
-            'ui.bootstrap'
+            'ui.bootstrap',
+            'timer'
         ]).config([
         '$stateProvider', '$httpProvider', '$urlRouterProvider', '$sailsSocketProvider',
         function ($stateProvider, $httpProvider, $urlRouterProvider, $sailsSocketProvider) {
