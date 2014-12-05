@@ -21,6 +21,10 @@ module.exports = {
   			type: 'string'
   		},
 
+        image: {
+            type: 'string'
+        },
+
   		facebook: {
   			type: 'string'
   		},
