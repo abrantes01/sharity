@@ -31,7 +31,7 @@ angular.module('app',
                             '$stateParams','$sailsSocket',
                             function($stateParams,$sailsSocket){
                                 return $sailsSocket
-                                    .get('localhost:1337' + '/company/' + $stateParams.id + '?populate=[challenges,donations]')
+                                    .get('localhost:1337' + '/company/' + $stateParams.id)
                                     .then(function(response) {
                                         console.log(response);
                                         return response.data;
