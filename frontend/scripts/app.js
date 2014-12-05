@@ -7,7 +7,8 @@ angular.module('app',
             'sails.io',
             'app.home',
             'app.company',
-            'app.controllers'
+            'app.controllers',
+            'ui.bootstrap'
         ]).config([
         '$stateProvider', '$httpProvider', '$urlRouterProvider', '$sailsSocketProvider',
         function ($stateProvider, $httpProvider, $urlRouterProvider, $sailsSocketProvider) {
