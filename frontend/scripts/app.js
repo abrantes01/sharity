@@ -21,7 +21,21 @@ angular.module('app',
                 .state("index", {
                     url: "/",
                     templateUrl: "/views/home.html",
-                    controller: "homeCtrl"
+                    controller: "homeCtrl",
+                    resolve: {
+                        challenges: [
+                            '$sailsSocket',
+                            function($sailsSocket){
+                                return $sailsSocket
+                                    .get(appConfig.appUrl + '/challenge')
+                                    .then(function(response) {
+                                        return response.data;
+                                    }, function(err){
+                                        console.log(err)
+                                    });
+                            }
+                        ]
+                    }
                 })
                 .state("company",{
                     url: "/company/:id",
