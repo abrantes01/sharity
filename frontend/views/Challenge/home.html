@@ -1,0 +1,153 @@
+<section class="mtop">
+    <section class="container-fluid container">
+        <section class="row-fluid">
+            <section id="donation_box">
+                <section class="container container-fluid">
+                    <section class="row-fluid">
+                        <div class="span8 first"> <h2> {{challenge.name}} </h2> </div>
+                    </section>
+                </section>
+            </section>		<!-- end of Page Title -->
+        </section>
+        </br>
+    </section>
+</section>
+<!-- End of Tile & Breadcrumbs -->
+
+<!-- Page Content Container -->
+<section id="content" class="mbtm fund_rasising_listing">
+<section class="container-fluid container">
+
+<section class="row-fluid">
+
+<section class="span9 event_listing" id="event_listing">
+
+    <figure id="event_grid" class="span12 first outer_lyr mbtm">
+
+        <div class="inner_lyr">
+            <img src="images/event2.jpg" alt="Event Image" />
+
+            <div class="event_info">
+                <div class="span4 first" id="event_title">
+                    <h3> {{challenge.name}} </h3>
+                    <p> Du {{challenge.start | date : format : timezone}} au {{challenge.end | date : format : timezone}} </p>
+                </div>
+                <div class="span4" id="event_loc">
+                    <h4>Par {{challenge.company.name}} pour ONG</h4>
+                </div>
+                <div class="span4" id="event_counter">
+                    <div class="hasCountdown" id="countdown156">
+												<span class="countdown_row countdown_show4">
+														<span class="countdown_section">	<span class="countdown_amount">	009	</span>	<br>	Days	</span>
+														<span class="countdown_section">	<span class="countdown_amount">	23	</span>	<br>	Hours	</span>
+														<span class="countdown_section">	<span class="countdown_amount">	18	</span>	<br>	Minutes	</span>
+														<span class="countdown_section">	<span class="countdown_amount">	18	</span>	<br>	Seconds	</span>
+												</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </figure>
+
+    <figure id="event_detail" class="span12 first outer_lyr mbtm2">
+
+        <div class="inner_lyr">
+            <h3> {{challenge.name}} </h3>
+            <h4> Crée par {{challenge.company.name}} pour ... </h4>
+            <p>{{challenge.description}}</p>
+
+        </div>
+
+    </figure>
+
+
+    <figure id="map_holder" class="span12 first mbtm2"> 		<iframe src="https://maps.google.com/?ie=UTF8&amp;ll=-20.234496,57.603722&amp;spn=0.093419,0.169086&amp;t=m&amp;z=13&amp;output=embed" class="map-border"></iframe> <div id="map_abs"> <h4> Lets join Together </h4>  <span> <i class="icon-map-marker"></i> <br /> Location Map </span> </div> </figure>
+
+    <figure class="span12 first">
+
+        <section class="span6 first form" id="contact_form">
+            <form action="http://html.crunchpress.com/be-human/contact.php" method="post">
+                <input type="text" name="name" value="">
+                <input type="text" name="email" value="">
+                <textarea rows="10" cols="10" name="comments"> Enter your Comment</textarea>
+                <input type="submit" name="submit" value="Submit" class="btns">
+            </form>
+        </section>
+
+        
+
+
+    </figure>
+</section>
+
+<section id="sidebar" class="span3">
+
+    <figure class="widget social_follow">
+
+        <div id="social_follow">
+            <span class="social_fb"> <i class="icon-facebook"></i> <em> 5678 Folowers </em> </span>
+            <span class="social_twitter"> <i class="icon-twitter"></i> <em> 5678 Folowers</em> </span>
+
+        </div>
+
+    </figure>
+
+    <figure class="widget events">
+
+        <h3> <i class="icon-bullhorn"></i> Autres évenements de {{challenge.company.name}} </h3>
+        <ul id="posts">
+
+            <li>
+
+                <div class="img span4 first"> <img src="images/post_img.png" alt="recent Event Image" /> </div>
+
+                <div class="post_content span8">
+                    <h4> <a href="event_detail.html#" title="post Title"> Food Expo </a> </h4>
+                    <div class="location_date"> <span> <i class="icon-calendar"></i> 12 june 2013</span> <span> <i class="icon-map-marker"></i> San Jose  </span> </div>
+                </div>
+            </li>
+            <li>
+
+                <div class="img span4 first"> <img src="images/post_img.png" alt="recent Event Image" /> </div>
+
+                <div class="post_content span8">
+                    <h4> <a href="event_detail.html#" title="post Title"> Volunteer Training </a> </h4>
+                    <div class="location_date"> <span> <i class="icon-calendar"></i> 12 june 2013</span> <span> <i class="icon-map-marker"></i> LUM, Ohayo   </span> </div>
+                </div>
+            </li>
+            <li>
+
+                <div class="img span4 first"> <img src="images/post_img.png" alt="recent Event Image" /> </div>
+
+                <div class="post_content span8">
+                    <h4> <a href="event_detail.html#" title="post Title"> Fund Raising </a> </h4>
+                    <div class="location_date"> <span> <i class="icon-calendar"></i> 12 june 2013</span> <span> <i class="icon-map-marker"></i> Redox Park, Oslo   </span> </div>
+                </div>
+            </li>
+
+        </ul>
+
+
+    </figure>
+
+    <figure class="widget recent_comments">
+
+        <h3> <i class="icon-comments"></i> Commentaires </h3>
+
+        <ul id="recent_Comments">
+
+            <li> <i class="icon-comments-alt"></i> <span>  <a href="event_detail.html#"> morbi tristique </a> senectus et netus et a fames ac turpis egestas. </span> </li>
+            <li> <i class="icon-comments-alt"></i> <span>  <a href="event_detail.html#"> morbi tristique </a> senectus et netus et a fames ac turpis egestas. </span> </li>
+            <li> <i class="icon-comments-alt"></i> <span> Pellentesque habitant <a href="event_detail.html#"> Pellentesque habitant </a> senectus et netus et a fames ac turpis egestas. </span> </li>
+            <li> <i class="icon-comments-alt"></i> <span>  <a href="event_detail.html#"> morbi tristique </a> senectus et netus et a fames ac turpis egestas. </span> </li>
+        </ul>
+
+    </figure>
+
+</section>
+
+</section>
+</section>
+
+</section>
