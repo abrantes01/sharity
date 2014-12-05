@@ -14,6 +14,7 @@
 
                         </section>
                     </section>
+
                 </section>		<!-- end of Page Title -->
             </section>
         </section>
@@ -30,22 +31,17 @@
 
                     <figure class="span3 first outer_lyr">
 
-                        <img src="{{company.image}}" alt="Logo" />
+                        <img src="{{charity.image}}" alt="Logo" />
 
                     </figure>
-                    <h3 style="text-align: center"> Derniers challenges </h3>
-                    <figure class="span3 second outer_lyr" id="category_image" ng-repeat="challenge in challenges|limitTo:3">
 
-                        <a data-ui-sref="app.challenge({id: challenge.id})"><img src="{{challenge.image}}" alt="{{challenge.name}}" /></a>
-
-                    </figure>
 
                     <br>
                     <figure class="span12 first outer_lyr" id="project_contet">
 
                         <div class="inner_lyr">
                             <h3> Qui sommes-nous ?</h3>
-                            <p> {{company.description}}</p>
+                            <p> {{charity.description}}</p>
                         </div>
                     </figure>
 
@@ -57,12 +53,15 @@
 
                     <figure class="widget events">
 
-                        <h3> <i class="icon-bullhorn"></i> Dernières donations</h3>
+                        <h3> <i class="icon-bullhorn"></i> Dernières missions</h3>
+                        <ul>
+                        <li ng-repeat="mission in missions|limitTo:3">
 
+                            <a data-ui-sref="app.mission({id: mission.id})"><h4>{{mission.name}}</h4></a>
 
+                        </li>
+                        </ul>
                     </figure>
-
-
 
                 </section>
 
@@ -78,7 +77,7 @@
             <div class="img span4 first"> <img src="{{donation.image}}" alt="recent Event Image" /> </div>
 
             <div class="post_content span8">
-                <h4> <a href="crowdfunding_detail.html#" title="post Title"> {{donation.mission.name}} </a> </h4>
+                <h4> <a data-ui-sref="app.mission({id: mission.id})" title="post Title"> {{donation.mission.name}} </a> </h4>
                 <div class="location_date"> <span> {{donation.amount}}€</span></div>
             </div>
         </li>
