@@ -42,76 +42,76 @@
 <body>
 <!-- Start Main Wrapper -->
 <div class="wrapper">
-<!-- Start of Header -->
+    <!-- Start of Header -->
 
-<!-- Title & BreadCrumbs -->
-<section class="mtop">
-    <section class="container-fluid container">
-        <section class="row-fluid">
-            <section id="donation_box">
-                <section class="container container-fluid">
-                    <section class="row-fluid">
-                        <div class="span8 first"> <h2> {{company.name}}</h2> </div>
+    <!-- Title & BreadCrumbs -->
+    <section class="mtop">
+        <section class="container-fluid container">
+            <section class="row-fluid">
+                <section id="donation_box">
+                    <section class="container container-fluid">
+                        <section class="row-fluid">
+                            <div class="span8 first"> <h2> {{company.name}}</h2> </div>
 
+                        </section>
                     </section>
-                </section>
-            </section>		<!-- end of Page Title -->
+                </section>		<!-- end of Page Title -->
+            </section>
         </section>
     </section>
-</section>
-<!-- End of Tile & Breadcrumbs -->
-</br>
-<!-- Page Content Container -->
-<section id="content" class="mbtm fund_rasising_listing">
-<section class="container-fluid container">
+    <!-- End of Tile & Breadcrumbs -->
+    </br>
+    <!-- Page Content Container -->
+    <section id="content" class="mbtm fund_rasising_listing">
+        <section class="container-fluid container">
 
-<section class="row-fluid">
+            <section class="row-fluid">
 
-<section class="span9 fund_project_detail" id="fund_project_detail">
+                <section class="span9 fund_project_detail" id="fund_project_detail">
 
-    <figure class="span3 first outer_lyr">
+                    <figure class="span3 first outer_lyr">
 
-        <img src="{{company.image}}" alt="Logo" />
+                        <img src="{{company.image}}" alt="Logo" />
 
-    </figure>
-    <h3 style="text-align: center"> Derniers challenges </h3>
-    <figure class="span3 second outer_lyr" id="category_image" ng-repeat="challenge in challenges|limitTo:3">
+                    </figure>
+                    <h3 style="text-align: center"> Derniers challenges </h3>
+                    <figure class="span3 second outer_lyr" id="category_image" ng-repeat="challenge in challenges|limitTo:3">
 
-        <a data-ui-sref="app.challenge({id: challenge.id})"><img src="{{challenge.image}}" alt="{{challenge.name}}" /></a>
+                        <a data-ui-sref="app.challenge({id: challenge.id})"><img src="{{challenge.image}}" alt="{{challenge.name}}" /></a>
 
-    </figure>
+                    </figure>
 
-    <br>
-    <figure class="span12 first outer_lyr" id="project_contet">
+                    <br>
+                    <figure class="span12 first outer_lyr" id="project_contet">
 
-        <div class="inner_lyr">
-            <h3> Qui sommes-nous ?</h3>
-            <p> {{company.description}}</p>
-        </div>
-    </figure>
-
-
-</section>
-
-<section id="sidebar" class="span3">
+                        <div class="inner_lyr">
+                            <h3> Qui sommes-nous ?</h3>
+                            <p> {{company.description}}</p>
+                        </div>
+                    </figure>
 
 
-    <figure class="widget events">
+                </section>
 
-        <h3> <i class="icon-bullhorn"></i> Dernières donations</h3>
-
-
-    </figure>
+                <section id="sidebar" class="span3">
 
 
+                    <figure class="widget events">
 
-</section>
+                        <h3> <i class="icon-bullhorn"></i> Dernières donations</h3>
 
-</section>
-</section>
 
-</section>
-<!-- Page Content Container -->
+                    </figure>
+
+
+
+                </section>
+
+            </section>
+        </section>
+
+    </section>
+    <!-- Page Content Container -->
     <ul id="posts">
 
         <li ng-repeat="donation in company.donations|limitTo:6" >
@@ -124,8 +124,8 @@
             </div>
         </li>
     </ul>
-<!-- Start of Footer -->
-<!-- End of Footer -->
+    <!-- Start of Footer -->
+    <!-- End of Footer -->
 </div>
 <!-- End Main Wrapper -->
 <!-- JS Files Start -->

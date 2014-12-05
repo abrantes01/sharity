@@ -7,6 +7,7 @@ angular.module('app',
             'sails.io',
             'app.home',
             'app.company',
+            'app.charity',
             'app.controllers',
             'ui.bootstrap'
         ]).config([
@@ -31,7 +32,7 @@ angular.module('app',
                             '$stateParams','$sailsSocket',
                             function($stateParams,$sailsSocket){
                                 return $sailsSocket
-                                    .get('localhost:1337' + '/company/' + $stateParams.id)
+                                    .get(appConfig.appUrl + '/company/' + $stateParams.id)
                                     .then(function(response) {
                                         console.log(response);
                                         return response.data;
@@ -42,6 +43,11 @@ angular.module('app',
                         ]
                     }
 
+                })
+                .state("allCompanies",{
+                    url: "/companies",
+                    templateUrl: "/views/Company/displayAll.html",
+                    controller: "allCompanyCtrl"
                 })
             // Send to login if the URL was not found
             $urlRouterProvider.otherwise("/");

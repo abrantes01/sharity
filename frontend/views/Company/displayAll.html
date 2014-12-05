@@ -5,7 +5,7 @@
 <!--[if IE 9]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-    <title>Charity Theme Fund Raising Project Detail</title>
+    <title>Charity Theme Product List View </title>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <![endif]-->
@@ -37,13 +37,12 @@
     <!-- skins -->
     <!-- end of Color Switcher -->
 
-
 </head>
 <body>
 <!-- Start Main Wrapper -->
 <div class="wrapper">
 <!-- Start of Header -->
-
+<!-- End of Header -->
 <!-- Title & BreadCrumbs -->
 <section class="mtop">
     <section class="container-fluid container">
@@ -51,7 +50,7 @@
             <section id="donation_box">
                 <section class="container container-fluid">
                     <section class="row-fluid">
-                        <div class="span8 first"> <h2> {{company.name}}</h2> </div>
+                        <div class="span8 first"> <h2> Les entreprises </h2> </div>
 
                     </section>
                 </section>
@@ -60,70 +59,44 @@
     </section>
 </section>
 <!-- End of Tile & Breadcrumbs -->
-</br>
+<br>
 <!-- Page Content Container -->
-<section id="content" class="mbtm fund_rasising_listing">
+<section id="content" class="mbtm product_grid">
 <section class="container-fluid container">
 
 <section class="row-fluid">
 
-<section class="span9 fund_project_detail" id="fund_project_detail">
+<section class="span9 product_view" id="product_list">
 
-    <figure class="span3 first outer_lyr">
 
-        <img src="{{company.image}}" alt="Logo" />
+    <Section class="product_list_holder" >
 
-    </figure>
-    <h3 style="text-align: center"> Derniers challenges </h3>
-    <figure class="span3 second outer_lyr" id="category_image" ng-repeat="challenge in challenges|limitTo:3">
+        <figure class="span12 first product" ng-repeat="company in companies">
 
-        <a data-ui-sref="app.challenge({id: challenge.id})"><img src="{{challenge.image}}" alt="{{challenge.name}}" /></a>
+            <div class="product_img span4 first">
+                <img src="{{company.image}}" alt="Product Image" />
+                <span class="sale_icon"></span>
+            </div>
+            <div class="span8 product_description">
+                <h3> <a data-ui-sref="company({id: company.id})"> {{company.name}} </a> </h3>
+                <p> {{company.description}} </p>
+                <a data-ui-sref="company({id: company.id})" class="btn pull-right" > En savoir plus</a>
+            </div>
 
-    </figure>
-
-    <br>
-    <figure class="span12 first outer_lyr" id="project_contet">
-
-        <div class="inner_lyr">
-            <h3> Qui sommes-nous ?</h3>
-            <p> {{company.description}}</p>
-        </div>
-    </figure>
-
+        </figure>
 
 </section>
 
-<section id="sidebar" class="span3">
-
-
-    <figure class="widget events">
-
-        <h3> <i class="icon-bullhorn"></i> Dernières donations</h3>
-
-
-    </figure>
 
 
 
-</section>
 
 </section>
 </section>
 
 </section>
 <!-- Page Content Container -->
-    <ul id="posts">
 
-        <li ng-repeat="donation in company.donations|limitTo:6" >
-
-            <div class="img span4 first"> <img src="{{donation.image}}" alt="recent Event Image" /> </div>
-
-            <div class="post_content span8">
-                <h4> <a href="crowdfunding_detail.html#" title="post Title"> {{donation.mission.name}} </a> </h4>
-                <div class="location_date"> <span> {{donation.amount}}€</span></div>
-            </div>
-        </li>
-    </ul>
 <!-- Start of Footer -->
 <!-- End of Footer -->
 </div>
