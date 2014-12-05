@@ -1,0 +1,68 @@
+
+<!-- Start Main Wrapper -->
+<div class="wrapper">
+<!-- Start of Header -->
+<!-- End of Header -->
+<!-- Title & BreadCrumbs -->
+<section class="mtop">
+    <section class="container-fluid container">
+        <section class="row-fluid">
+            <section id="donation_box">
+                <section class="container container-fluid">
+                    <section class="row-fluid">
+                        <div class="span8 first"> <h2> Les défis en cours </h2> </div>
+
+                    </section>
+                </section>
+            </section>		<!-- end of Page Title -->
+        </section>
+    </section>
+</section>
+<!-- End of Tile & Breadcrumbs -->
+<br>
+<!-- Page Content Container -->
+<section id="content" class="mbtm product_grid">
+<section class="container-fluid container">
+
+<section class="row-fluid" style="background-color: white">
+
+<section class="span12 product_view" id="product_list" style="padding: 35px">
+
+
+    <Section class="product_list_holder" >
+
+        <figure class="span12 first product" ng-repeat="challenge in challenges">
+            <a data-ui-sref="challenge({id: challenge.id})">
+
+            <div class="product_img span4 first">
+                <img ng-src="{{challenge.image}}" style="max-height: 180px; width: auto; display: block;  margin: auto; margin-bottom: 30px" alt="Product Image" />
+            </div>
+            <div class="span8 product_description">
+                <h3 style="margin-left: 20px">  {{challenge.name}}</h3>
+                <p style="text-align: justify; margin-left: 20px"> {{challenge.description}} </p>
+                <a data-ui-sref="cohallenge({id: challenge.id})" class="btn pull-right" > En savoir plus</a>
+            </div>
+            </a>
+
+        </figure>
+    </section>
+
+</section>
+
+
+
+
+
+</section>
+</section>
+
+</section>
+<!-- Page Content Container -->
+
+<!-- Start of Footer -->
+<!-- End of Footer -->
+</div>
+<!-- End Main Wrapper -->
+
+</body>
+</html>

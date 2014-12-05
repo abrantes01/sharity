@@ -11,6 +11,7 @@ angular.module('app.challenge', []).controller('challengeCtrl', [
             $sailsSocket
                 .get(appConfig.appUrl + '/challenge')
                 .success(function (challenges) {
+                    console.log(challenges)
                     $scope.challenges = challenges;
                 })
                 .error(function (err) {
