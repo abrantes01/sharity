@@ -32,16 +32,18 @@
     <Section class="product_list_holder" >
 
         <figure class="span12 first product" ng-repeat="company in companies">
+            <a data-ui-sref="company({id: company.id})" style="color: #333">
 
             <div class="product_img span4 first">
                 <img ng-src="{{company.image}}" style="max-height: 180px; width: auto; display: block;  margin: auto;" alt="Product Image" />
             </div>
             <div class="span8 product_description">
-                <h3 style="margin-left: 20px"> <a data-ui-sref="company({id: company.id})"> {{company.name}} </a> </h3>
+                <h3 style="margin-left: 20px"> {{company.name}} </h3>
                 <p style="text-align: justify; margin-left: 20px"> {{company.description}} </p>
                 <a data-ui-sref="company({id: company.id})" class="btn pull-right" > En savoir plus</a>
             </div>
 
+            </a>
         </figure>
     </section>
 
