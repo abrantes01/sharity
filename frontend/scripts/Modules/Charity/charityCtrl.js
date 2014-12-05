@@ -1,12 +1,12 @@
-angular.module('app.charity', []).controller('charityCtrl',
+angular.module('app.charity', []).controller('charityCtrl',[
     '$scope', '$sailsSocket','data',
     function ($scope, $sailsSocket,data) {
         $scope.charity = data;
         console.log($scope.charity);
+        $scope.missions = $scope.charity.missions;
 
-
-    })
-    .controller('allCharityCtrl',['$scope', '$sailsSocket',
+    }])
+   .controller('allCharityCtrl',['$scope', '$sailsSocket',
         function ($scope, $sailsSocket) {
 
             $sailsSocket

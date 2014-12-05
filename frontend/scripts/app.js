@@ -110,6 +110,11 @@ angular.module('app',
                         ]
                     }
                 })
+                .state("allCharities",{
+                    url: "/charities",
+                    templateUrl: "/views/Charity/displayAll.html",
+                    controller: "allCharityCtrl"
+                })
             // Send to login if the URL was not found
             $urlRouterProvider.otherwise("/");
         }
