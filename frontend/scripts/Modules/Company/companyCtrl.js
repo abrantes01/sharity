@@ -1,3 +1,7 @@
-/**
- * Created by relbachiri on 05/12/14.
- */
+angular.module('app.company', []).controller('companyCtrl', [
+    '$scope', '$sailsSocket','data',
+    function ($scope, $sailsSocket,data) {
+        $scope.company = data;
+        console.log($scope.company);
+
+    }])
