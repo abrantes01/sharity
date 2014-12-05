@@ -63,6 +63,26 @@ angular.module('app',
                     templateUrl: "/views/Company/displayAll.html",
                     controller: "allCompanyCtrl"
                 })
+                .state("charity",{
+                    url: "/charity/:id",
+                    templateUrl: "/views/Charity/home.html",
+                    controller: "charityCtrl",
+                    resolve: {
+                        data: [
+                            '$stateParams','$sailsSocket',
+                            function($stateParams,$sailsSocket){
+                                return $sailsSocket
+                                    .get(appConfig.appUrl + '/charity/' + $stateParams.id)
+                                    .then(function(response) {
+                                        console.log(response);
+                                        return response.data;
+                                    },function(err){
+                                        console.log(err);
+                                    });
+                            }
+                        ]
+                    }
+                })
             // Send to login if the URL was not found
             $urlRouterProvider.otherwise("/");
         }
