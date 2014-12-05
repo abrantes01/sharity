@@ -17,6 +17,14 @@ module.exports = {
   			type: 'text'
   		},
 
+      website: {
+        type: 'text'
+      },
+      
+      image: {
+        type: 'text'
+      },
+
   		missions: {
   			collection: 'mission',
   			via: 'charity'
