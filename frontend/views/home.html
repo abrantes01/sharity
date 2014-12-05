@@ -5,9 +5,9 @@
         <li>
             <img src="images/t_slider_1.jpg" alt="Banner Slider" />
             <div class="slider_content">
-                <p class="b_dark"> we need your support</p>
+                <p class="b_dark"> Réalisez des défis</p>
                 <span class="clear"></span>
-                <p class="b_green"> to educate, feed and accomodate!</p>
+                <p class="b_green"> et contribuez à un monde meilleur !</p>
             </div>
         </li>
 <!--
@@ -67,11 +67,11 @@
             <!-- Start of Features Box 2 -->
             <figure class="span4 feature">
                 <div class="ftr_img f-img-2">
-                    <span class="img"> Volcanic Eruptions </span>
+                    <span class="img"> Particuliers </span>
                 </div>
                 <div class="ftr_txt">
-                    <strong> Volcanic Eruptions </strong>
-                    <p> Volcano alorum prompta, mel ea sumo semper nusquam. Soluta intellegebat vim id, vix timeam latine electram at. </p>
+                    <strong> Particuliers </strong>
+                    <p> En réalisant de simples défis, vous contribuez à des oeuvres caritatives.</p>
                 </div>
             </figure>
             <!-- End of Features Boxes 2 -->
@@ -79,11 +79,11 @@
             <!-- Start of Features Box 3 -->
             <figure class="span4 feature">
                 <div class="ftr_img f-img-3">
-                    <span class="img"> Thunder Storms  </span>
+                    <span class="img"> Entreprises  </span>
                 </div>
                 <div class="ftr_txt">
-                    <strong> Thunder Storms </strong>
-                    <p> Malorum prompta, mel ea sumo semper nusquam. Soluta intellegebat vim id, vix timeam latine electram at. </p>
+                    <strong> Entreprises</strong>
+                    <p> Soutenez les organisations qui vous inspirent et augmentez votre notoriété à moindre coût. </p>
                 </div>
             </figure>
             <!-- End of Features Boxes 3 -->
@@ -91,11 +91,11 @@
             <!-- Start of Features Box 4 -->
             <figure class="span4 feature">
                 <div class="ftr_img f-img-4">
-                    <span class="img"> Tsunami </span>
+                    <span class="img"> Organisme </span>
                 </div>
                 <div class="ftr_txt">
-                    <strong> Tsunami </strong>
-                    <p> An malorum prompta, mel ea sumo semper nusquam. Soluta intellegebat vim id, vix timeam latine electram at. </p>
+                    <strong> ONG</strong>
+                    <p> Bénificiez d'un large réseau d'entreprises et de particuliers pour financer vos missions et gagner du temps. </p>
                 </div>
             </figure>
             <!-- End of Features Boxes 4 -->
@@ -104,24 +104,7 @@
 </section>
 <!-- End of Features Boxes -->
 
-<!-- Start of Donation Box -->
-<section id="donation_box" class="mbtm">
-    <section class="container container-fluid">
-        <section class="row-fluid">
-            <figure class="span10">
-                <h2> Sometimes it takes a <strong> natural disaster </strong> to reveal a <strong> social disaster!</strong> </h2>
-            </figure>
-            <figure class="span2">
-                <form action="index.html#">
-                    <input type="hidden" value="5.00" name="amout" />
-                    <input type="hidden" value="USD" name="Currency" />
-                    <button  data-placement="top" data-rel="tooltip" title="Support Us"  class=" btn btn-large dropdown-toggle" type="submit">Donate Now</button>
-                </form>
-            </figure>
-        </section>
-    </section>
-</section>
-<!-- End of Donation Box -->
+
 
 <!-- Start of Charity News & Progress Section -->
 <section id="progress_news" class="mbtm">
@@ -129,13 +112,13 @@
         <section class="row-fluid">
 
             <figure class="span4" id="charity_progress" ng-repeat="challenge in challenges| limitTo:3">
-                <h3> {{challenge.name}} </h3>
+                <h3 style="padding:5px"> {{challenge.name}} </h3>
                 <div id="charity_process_inner">
                     <div class="span5 img first">
                         <img ng-src="{{challenge.image}}" alt="Charity Hospital" />
                     </div>
                     <div class="span7 progress_report">
-                        <h2> ${{challenge.amount}} </h2>
+                        <h2> €{{challenge.amount}} </h2>
                         <h4> {{challenge.company.name}}</h4>
                         <div class="progress progress-striped active m9p">
                             <div class="bar p80"></div>
@@ -143,11 +126,11 @@
                         <br />
                         <div class="info">
                             <div class="span6 first">
-                                <i class="icon-user"></i> <span> {{challenge.users.length}} </span> Participants
+                                <i class="icon-user"></i> <span> {{challenge.amount /4}} </span> Participants
                             </div>
 
                             <div class="span6 ntr">
-                                <i class="icon-calendar-empty"></i> <span> 204 </span> Days Left
+                                <i class="icon-calendar-empty"></i> <span> {{challenge.amount / 20}} </span> Jours restants
                             </div>
 
                         </div>
