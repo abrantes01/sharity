@@ -128,78 +128,22 @@
     <section class="container-fluid container">
         <section class="row-fluid">
 
-            <figure class="span4 first" id="charity_progress">
-                <h3> Help Us build Charity Hospital </h3>
+            <figure class="span4" id="charity_progress" ng-repeat="challenge in challenges| limitTo:3">
+                <h3> {{challenge.name}} </h3>
                 <div id="charity_process_inner">
                     <div class="span5 img first">
                         <img src="images/progress_image.jpg" alt="Charity Hospital" />
                     </div>
                     <div class="span7 progress_report">
-                        <h2> $18,387 </h2>
-                        <h4> Pledged of $200,000 Goal</h4>
+                        <h2> ${{challenge.amount}} </h2>
+                        <h4> {{challenge.company.name}}</h4>
                         <div class="progress progress-striped active m9p">
                             <div class="bar p80"></div>
                         </div>
                         <br />
                         <div class="info">
                             <div class="span6 first">
-                                <i class="icon-user"></i> <span> 47 </span> Pledgers
-                            </div>
-
-                            <div class="span6 ntr">
-                                <i class="icon-calendar-empty"></i> <span> 204 </span> Days Left
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </figure>
-
-            <figure class="span4" id="charity_progress">
-                <h3> Help Us build Charity Hospital </h3>
-                <div id="charity_process_inner">
-                    <div class="span5 img first">
-                        <img src="images/progress_image.jpg" alt="Charity Hospital" />
-                    </div>
-                    <div class="span7 progress_report">
-                        <h2> $18,387 </h2>
-                        <h4> Pledged of $200,000 Goal</h4>
-                        <div class="progress progress-striped active m9p">
-                            <div class="bar p80"></div>
-                        </div>
-                        <br />
-                        <div class="info">
-                            <div class="span6 first">
-                                <i class="icon-user"></i> <span> 47 </span> Pledgers
-                            </div>
-
-                            <div class="span6 ntr">
-                                <i class="icon-calendar-empty"></i> <span> 204 </span> Days Left
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </figure>
-
-            <figure class="span4" id="charity_progress">
-                <h3> Help Us build Charity Hospital </h3>
-                <div id="charity_process_inner">
-                    <div class="span5 img first">
-                        <img src="images/progress_image.jpg" alt="Charity Hospital" />
-                    </div>
-                    <div class="span7 progress_report">
-                        <h2> $18,387 </h2>
-                        <h4> Pledged of $200,000 Goal</h4>
-                        <div class="progress progress-striped active m9p">
-                            <div class="bar p80"></div>
-                        </div>
-                        <br />
-                        <div class="info">
-                            <div class="span6 first">
-                                <i class="icon-user"></i> <span> 47 </span> Pledgers
+                                <i class="icon-user"></i> <span> {{challenge.users.length}} </span> Participants
                             </div>
 
                             <div class="span6 ntr">
