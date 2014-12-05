@@ -8,6 +8,7 @@ angular.module('app',
             'app.home',
             'app.company',
             'app.charity',
+            'app.challenge',
             'app.controllers',
             'ui.bootstrap'
         ]).config([
@@ -62,6 +63,32 @@ angular.module('app',
                     url: "/companies",
                     templateUrl: "/views/Company/displayAll.html",
                     controller: "allCompanyCtrl"
+                })
+                .state("challenge",{
+                    url: "/challenge/:id",
+                    templateUrl: "/views/Challenge/home.html",
+                    controller: "challengeCtrl",
+                    resolve: {
+                        data: [
+                            '$stateParams','$sailsSocket',
+                            function($stateParams,$sailsSocket){
+                                return $sailsSocket
+                                    .get(appConfig.appUrl + '/challenge/' + $stateParams.id)
+                                    .then(function(response) {
+                                        console.log(response);
+                                        return response.data;
+                                    },function(err){
+                                        console.log(err);
+                                    });
+                            }
+                        ]
+                    }
+
+                })
+                .state("allChallenges",{
+                    url: "/challenges",
+                    templateUrl: "/views/Challenge/displayAll.html",
+                    controller: "allChallengeCtrl"
                 })
                 .state("charity",{
                     url: "/charity/:id",

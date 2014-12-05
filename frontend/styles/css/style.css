@@ -141,7 +141,7 @@ body{ background:url('../images/bg_main.png') top center repeat;}
 .top_bar .social li a.s7:hover{ background-position: -202px 32px;}
 .top_bar .social li a.s8{ background-position: -236px 0;}
 .top_bar .social li a.s8:hover{ background-position: -236px 32px;}
-.logo_container{ padding:30px 0;}
+.logo_container{ padding:10px 0;}
 #logo img{ width:auto; height:auto;}
 
 /** Navigation **/

@@ -24,9 +24,9 @@
 <section id="content" class="mbtm product_grid">
 <section class="container-fluid container">
 
-<section class="row-fluid">
+<section class="row-fluid" style="background-color: white">
 
-<section class="span9 product_view" id="product_list">
+<section class="span12 product_view" id="product_list" style="padding: 35px">
 
 
     <Section class="product_list_holder" >
@@ -34,16 +34,16 @@
         <figure class="span12 first product" ng-repeat="company in companies">
 
             <div class="product_img span4 first">
-                <img src="{{company.image}}" alt="Product Image" />
-                <span class="sale_icon"></span>
+                <img ng-src="{{company.image}}" style="max-height: 180px; width: auto; display: block;  margin: auto;" alt="Product Image" />
             </div>
             <div class="span8 product_description">
-                <h3> <a data-ui-sref="company({id: company.id})"> {{company.name}} </a> </h3>
-                <p> {{company.description}} </p>
+                <h3 style="margin-left: 20px"> <a data-ui-sref="company({id: company.id})"> {{company.name}} </a> </h3>
+                <p style="text-align: justify; margin-left: 20px"> {{company.description}} </p>
                 <a data-ui-sref="company({id: company.id})" class="btn pull-right" > En savoir plus</a>
             </div>
 
         </figure>
+    </section>
 
 </section>
 
@@ -61,29 +61,6 @@
 <!-- End of Footer -->
 </div>
 <!-- End Main Wrapper -->
-<!-- JS Files Start -->
-<script type="text/javascript" src="js/lib-1-9-1.js"></script><!-- lib Js -->
-<script type="text/javascript" src="js/lib-1-7-1.js"></script><!-- lib Js -->
-<script type="text/javascript" src="js/modernizr.js"></script><!-- Modernizr -->
-<script type="text/javascript" src="js/easing.js"></script><!-- Easing js -->
-<script type="text/javascript" src="js/bootstrap.js"></script><!-- Bootstrap -->
-<script type="text/javascript" src="js/bxslider.js"></script><!-- BX Slider -->
-<script type="text/javascript" src="js/clearInput.js"></script><!-- Input Clear -->
-<script type="text/javascript" src="js/smooth-scroll.js"></script><!-- smooth Scroll -->
-<script type="text/javascript" src="js/prettyPhoto.js"></script><!-- Pretty Photo -->
-<script type="text/javascript" src="js/social.js"></script><!-- Social Media Hover Effect -->
-<script type="text/javascript" src="js/countdown.js"></script><!-- Event Counter -->
-<script type="text/javascript" src="js/custom.js"></script><!-- Custom / Functions -->
-<!--[if IE 8]>
-<script src="js/ie8_fix_maxwidth.js" type="text/javascript"></script>
-<![endif]-->
-
-<!-- switcher files -->
-<script type="text/javascript" src="js/cookie.js"></script>
-<script type="text/javascript" src="js/colorswitcher.js"></script>
-<!-- switcher files -->
-<!--switcher contianer--> <div class="switcher"></div> <!--switcher container -->
-
 
 </body>
 </html>
